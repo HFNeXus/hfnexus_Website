@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HF Nexus - Deployment Steps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e90ff 0%, #ff7f50 50%, #1e90ff 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+            border-left: 5px solid #1e90ff;
+            padding-left: 20px;
+        }
+        
+        .step h2 {
+            color: #1e90ff;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .step h2 span {
+            background: #ff7f50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+        
+        .step p, .step li {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .step ul {
+            margin-left: 20px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .link-box {
+            background: #e7f3ff;
+            border: 2px solid #1e90ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .link-box p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .link-box code {
+            background: #f5f5f5;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            word-break: break-all;
+            font-size: 1.1em;
+            color: #d63031;
+        }
+        
+        .checklist {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .checklist label {
+            cursor: pointer;
+            font-size: 1.05em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .success-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Deploy Your Website Live!</h1>
+            <p>Make HF Nexus accessible to the whole world</p>
+        </div>
+        
+        <div class="content">
+            
+            <!-- STEP 1 -->
+            <div class="step">
+                <h2><span>STEP 1</span> Create GitHub Account</h2>
+                <p>✅ Go to <strong>https://github.com</strong></p>
+                <p>✅ Click <strong>"Sign up"</strong> (free account)</p>
+                <p>✅ Fill in email, password, username</p>
+                <p>✅ Verify your email</p>
+                <div class="highlight">
+                    <strong>💡 Tip:</strong> Remember your GitHub username - you'll need it for your website link!
+                </div>
+            </div>
+            
+            <!-- STEP 2 -->
+            <div class="step">
+                <h2><span>STEP 2</span> Create Repository on GitHub</h2>
+                <p>✅ Login to GitHub</p>
+                <p>✅ Click <strong>"+"</strong> icon → <strong>"New repository"</strong></p>
+                <p>✅ Fill in:</p>
+                <ul>
+                    <li><strong>Repository name:</strong> hf-nexus-website</li>
+                    <li><strong>Description:</strong> HF Nexus - Where Education Meets Technology</li>
+                    <li><strong>Select:</strong> Public</li>
+                    <li><strong>Check:</strong> "Add a README file"</li>
+                </ul>
+                <p>✅ Click <strong>"Create repository"</strong></p>
+            </div>
+            
+            <!-- STEP 3 -->
+            <div class="step">
+                <h2><span>STEP 3</span> Upload Your Website Files</h2>
+                <p>✅ In your repository, click <strong>"Add file"</strong> → <strong>"Upload files"</strong></p>
+                <p>✅ Drag & drop or select these files:</p>
+                <ul>
+                    <li>index.html</li>
+                    <li>about.html</li>
+                    <li>e-learning.html</li>
+                    <li>it-services.html</li>
+                    <li>digital-marketing.html</li>
+                    <li>academic-services.html</li>
+                    <li>contact.html</li>
+                    <li>css/ (folder)</li>
+                    <li>js/ (folder)</li>
+                    <li>assets/ (folder)</li>
+                </ul>
+                <p>✅ Click <strong>"Commit changes"</strong></p>
+                <div class="warning">
+                    ⚠️ <strong>Important:</strong> Make sure folders maintain their structure. Files should be in correct folders!
+                </div>
+            </div>
+            
+            <!-- STEP 4 -->
+            <div class="step">
+                <h2><span>STEP 4</span> Enable GitHub Pages</h2>
+                <p>✅ Go to repository → <strong>"Settings"</strong> (top right)</p>
+                <p>✅ Left sidebar → <strong>"Pages"</strong></p>
+                <p>✅ Under "Source":</p>
+                <ul>
+                    <li>Select: <strong>"Deploy from a branch"</strong></li>
+                    <li>Branch: <strong>"main"</strong> (or "master")</li>
+                    <li>Folder: <strong>"/ (root)"</strong></li>
+                </ul>
+                <p>✅ Click <strong>"Save"</strong></p>
+                <p>⏳ <strong>Wait 1-2 minutes</strong> for GitHub Pages to deploy...</p>
+            </div>
+            
+            <!-- STEP 5 -->
+            <div class="step">
+                <h2><span>STEP 5</span> Get Your Live Link!</h2>
+                <p>✅ Go back to Settings → Pages</p>
+                <p>✅ Look for: <strong>"Your site is live at: https://USERNAME.github.io/hf-nexus-website"</strong></p>
+                <div class="link-box">
+                    <p>Your Website Link:</p>
+                    <code>https://YOUR_GITHUB_USERNAME.github.io/hf-nexus-website</code>
+                </div>
+                <div class="highlight">
+                    <strong>🎉 That's it!</strong> Your website is now LIVE on the internet!<br>
+                    Share this link with anyone and they can visit your website 24/7
+                </div>
+            </div>
+            
+            <!-- CHECKLIST -->
+            <div class="checklist">
+                <h3>✅ Deployment Checklist:</h3>
+                <label><input type="checkbox"> GitHub account created</label>
+                <label><input type="checkbox"> Repository created</label>
+                <label><input type="checkbox"> All files uploaded</label>
+                <label><input type="checkbox"> GitHub Pages enabled</label>
+                <label><input type="checkbox"> Waited 1-2 minutes for deployment</label>
+                <label><input type="checkbox"> Website is live and working!</label>
+                <label><input type="checkbox"> Shared link with others 🎉</label>
+            </div>
+            
+            <!-- EXAMPLES -->
+            <div class="step">
+                <h2><span>EXAMPLES</span> Your Website Links</h2>
+                <p><strong>If your GitHub username is "hazeefa":</strong></p>
+                <ul>
+                    <li>🏠 Home: https://hazeefa.github.io/hf-nexus-website/</li>
+                    <li>📚 E-Learning: https://hazeefa.github.io/hf-nexus-website/e-learning.html</li>
+                    <li>💻 IT Services: https://hazeefa.github.io/hf-nexus-website/it-services.html</li>
+                    <li>📱 Digital Marketing: https://hazeefa.github.io/hf-nexus-website/digital-marketing.html</li>
+                    <li>🎓 Academic: https://hazeefa.github.io/hf-nexus-website/academic-services.html</li>
+                    <li>📞 Contact: https://hazeefa.github.io/hf-nexus-website/contact.html</li>
+                </ul>
+            </div>
+            
+            <!-- TROUBLESHOOTING -->
+            <div class="step">
+                <h2><span>⚠️</span> Troubleshooting</h2>
+                <p><strong>❌ "404 Not Found"?</strong></p>
+                <ul>
+                    <li>Wait 2-3 minutes for GitHub to build</li>
+                    <li>Check file names (case-sensitive)</li>
+                    <li>Make sure index.html is in root folder</li>
+                </ul>
+                <p><strong>❌ Logo not showing?</strong></p>
+                <ul>
+                    <li>Check logo.png is in assets/ folder</li>
+                    <li>Hard refresh: Ctrl+Shift+R</li>
+                </ul>
+                <p><strong>❌ Styling looks broken?</strong></p>
+                <ul>
+                    <li>Wait 1-2 minutes</li>
+                    <li>Clear browser cache</li>
+                    <li>Try different browser</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <div class="success-badge">✨ Your Website is Ready to Go Live! ✨</div>
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                Once deployed, anyone in the world can visit your website!<br>
+                Share the link on social media, business cards, WhatsApp, etc.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
